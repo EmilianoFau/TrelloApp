@@ -1,5 +1,9 @@
 body {
-    background-color: #141517;
+    background-color: rgb(55, 72, 102);
+    background-image: url(fondo.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .board {
     width: 100%;
@@ -7,19 +11,15 @@ body {
     display: flex;
     flex-direction: column;    
     align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
-
- /*
-.board .card {
-    align-items: center;
-}
-*/
 
 .card {
     display: flex;
     flex-direction: column;
     gap: 5px;
-    background-color: #191e23;
+    background-color: #101204;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
     padding: 5px;
     border-radius: 4px;
@@ -45,30 +45,28 @@ body {
 }
 
 #button-container {
-    position: absolute; /* Posiciona el contenedor del botón */
-    left: 45px; /* Ajusta según lo necesario para la alineación izquierda */
-    top: 100px; /* Ajusta según lo necesario para la posición vertical */
-}
-
-#add-button {
-    display: flex;
-    align-items: center;
-    justify-content: start;
+    width: 100%;
+    padding-left: 30px;
     margin-bottom: 30px;
 }
 
+#add-card-button {
+
+}
+
 .task {
-    background: #2d3d46;
+    background: #22272B;
     color: white;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     padding: 12px;
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
+    margin: 5PX;
 }
 
 .task:hover {
-    background: #334652;
+    background: #282E33;
 }
 
 .modal {
