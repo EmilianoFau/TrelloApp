@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrelloApp</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="board">
+        <h1 id="title">Mi Trello</h1>
+        <div id="button-container">
+            <button id="add-button">Agregar tarea</button>
+        </div>
+        <div id="backlog" class="card">
+            <h3 class="heading">Backlog</h3>
+            <p class="task">Pasear al perro</p>
+            <p class="task">Alimentar al perro</p>
+        </div>
+        <div id="to-do" class="card">
+            <h3 class="heading">To Do</h3>
+            <p class="task">Correr</p>
+            <p class="task">Gym</p>
+        </div>
+        <div id="in-progress" class="card">
+            <h3 class="heading">In Progress</h3>
+            <p class="task">Comer</p>
+        </div>
+        <div id="blocked" class="card">
+            <h3 class="heading">Blocked</h3>
+            <p class="task">Dormir</p>
+        </div>
+        <div id="done" class="card">
+            <h3 class="heading">Done</h3>
+            <p class="task">Cocinar</p>
+            <p class="task">Respirar</p>
+        </div>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="content">
+            <span class="close-button">&times;</span>
+            <h2 id="modal-title">Título de la tarea</h2>
+            <label for="description">Descripción</label>
+            <textarea id="description" rows="3"></textarea>
+            
+            <label for="assigned">Asignado a</label>
+            <select id="assigned">
+                <option value="usuario1">Pepito</option>
+                <option value="usuario2">Pepita</option>
+                <option value="usuario3">Jiji</option>
+            </select>
+
+            <label for="priority">Prioridad</label>
+            <select id="priority">
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+
+            <label for="status">Estado</label>
+            <select id="status">
+                <option value="backlog">Backlog</option>
+                <option value="to-do">To Do</option>
+                <option value="in-progress">In Progress</option>
+                <option value="blocked">Blocked</option>
+                <option value="done">Done</option>
+            </select>
+
+            <label for="deadline">Fecha límite</label>
+            <input type="date" id="deadline">
+
+            <button id="save-button">Guardar</button>
+        </div>
+    </div>
+</body>
+</html>
