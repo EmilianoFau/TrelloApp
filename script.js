@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     saveButton.addEventListener('click', () => {
-        // Implementar la lógica de guardar cambios
         modal.classList.add('hidden');
     });
 

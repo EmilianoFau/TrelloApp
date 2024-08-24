@@ -8,38 +8,60 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="board">
+    <div id="title-div">
         <h1 id="title">Mi Trello</h1>
+    </div>
+    <div class="board">
         <div id="button-container">
-            <button id="add-button">Agregar tarea</button>
+            <button id="add-list-button"><span id="add-list-button-span">+</span> Agregar nueva lista</button>
         </div>
         <div id="backlog" class="card">
-            <h3 class="heading">Backlog</h3>
-            <p class="task">Pasear al perro</p>
-            <p class="task">Alimentar al perro</p>
-            <button class="add-card-button"><span>+</span> Agregar tarjeta</button>
-        </div>
+            <h3 class="heading">Generales</h3>
+            <div class="tasks">
+                <p class="task">Pasear al perro</p>
+                <p class="task">Alimentar al perro</p>
+                <p class="task">Comprar comida</p>
+                <p class="task">Lavar la ropa</p>
+                <p class="task">Leer un libro</p>
+            </div>
+            <div class="button-container-add">
+                <button class="add-card-button"><span class="add-card-button-span">+</span> Agregar tarjeta</button>
+            </div>        </div>
         <div id="to-do" class="card">
-            <h3 class="heading">To Do</h3>
-            <p class="task">Correr</p>
-            <p class="task">Gym</p>
-            <button class="add-card-button"><span>+</span> Agregar tarjeta</button>
+            <h3 class="heading">Pendientes</h3>
+            <div class="tasks">
+                <p class="task">Correr</p>
+                <p class="task">Gym</p>
+            </div>
+            <div class="button-container-add">
+                <button class="add-card-button"><span class="add-card-button-span">+</span> Agregar tarjeta</button>
+            </div>
         </div>
         <div id="in-progress" class="card">
-            <h3 class="heading">In Progress</h3>
-            <p class="task">Comer</p>
-            <button class="add-card-button"><span>+</span> Agregar tarjeta</button>
-        </div>
+            <h3 class="heading">En proceso</h3>
+            <div class="tasks">
+                <p class="task">Comer</p>
+            </div>
+            <div class="button-container-add">
+                <button class="add-card-button"><span class="add-card-button-span">+</span> Agregar tarjeta</button>
+            </div>        </div>
         <div id="blocked" class="card">
-            <h3 class="heading">Blocked</h3>
-            <p class="task">Dormir</p>
-            <button class="add-card-button"><span>+</span> Agregar tarjeta</button>
-        </div>
+            <h3 class="heading">Bloqueadas</h3>
+            <div class="tasks">
+                <p class="task">Dormir</p>
+            </div>
+            <div class="button-container-add">
+                <button class="add-card-button"><span class="add-card-button-span">+</span> Agregar tarjeta</button>
+            </div>        </div>
         <div id="done" class="card">
-            <h3 class="heading">Done</h3>
-            <p class="task">Cocinar</p>
-            <p class="task">Respirar</p>
-            <button class="add-card-button"><span>+</span> Agregar tarjeta</button>
+            <h3 class="heading">Terminadas</h3>
+            <div class="tasks">
+                <p class="task">Cocinar</p>
+                <p class="task">Respirar</p>
+            </div>
+            <div class="button-container-add">
+                <button class="add-card-button"><span class="add-card-button-span">+</span> Agregar tarjeta</button>
+            </div>
         </div>
     </div>
 

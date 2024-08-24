@@ -5,6 +5,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .board {
     width: 100%;
     height: 100vh;
@@ -22,36 +23,128 @@ body {
     background-color: #101204;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
     padding: 5px;
-    border-radius: 4px;
+    border-radius: 12px;
     width: 225px;
     min-height: 120px;
     flex-shrink: 0;
     margin-bottom: 30px;
 }
 
-.heading {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 8px;
-    background: transparent;
-    backdrop-filter: blur(8px);
-    color: #4f6776;
+@media (min-width: 426px) and (max-width: 768px) {
+    .board {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .card {
+        width: calc(50% - 20px);
+        margin: 10px;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+    .board {
+        display: flex;
+        flex-direction: row; 
+        align-items: start;
+        overflow-x: auto; 
+        height: calc(100vh - 50px); 
+        padding: 20px; 
+    }
+
+    .card {
+        min-width: 225px; 
+        margin-right: 20px;
+        flex-shrink: 0;
+    }
+
+    #button-container {
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        margin-right: 10px;
+    }
 }
 
 #title {
     font-size: 38px;
     color: #f4f4f4;
     font-weight: bold;
+    margin-left: 25px;
+}
+
+#title-div {
+    background-color: #232b3b;
+    /*arreglar esto*/
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: normal;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
+    background: transparent;
+    backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.95);
 }
 
 #button-container {
-    width: 100%;
-    padding-left: 30px;
     margin-bottom: 30px;
 }
 
-#add-card-button {
+#add-list-button {
+    width: 235px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: #ffffff3d;
+    border-color: transparent;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: bold;
+}
 
+#add-list-button-span {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+#add-list-button:hover {
+    background-color: #ffffff31;
+}
+
+
+.button-container-add {
+
+}
+
+.add-card-button {
+    display: flex;
+    border-radius: 12px;
+    border: none;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.add-card-button-span {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.add-card-button:hover {
+    background-color: #10120434;
+}
+
+
+.tasks {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 .task {
@@ -59,10 +152,10 @@ body {
     color: white;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
     padding: 12px;
-    border-radius: 4px;
+    border-radius: 12px;
     font-size: 16px;
     cursor: pointer;
-    margin: 5PX;
+    margin: 5px 0;
 }
 
 .task:hover {
