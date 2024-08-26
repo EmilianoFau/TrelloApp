@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
     closeButton.addEventListener('click', () => {
         modal.classList.add('hidden');
     });
